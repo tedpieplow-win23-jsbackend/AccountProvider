@@ -32,7 +32,7 @@ public class SignUpService(ILogger<SignUpService> logger, SignUpFactory signUpFa
                     var errorString = "";
                     foreach (var error in validationResult.Errors)
                     {
-                        errorString += $"{error}\n";
+                        errorString += $"{error.ErrorMessage}\n";
                     }
                     _logger.LogError(errorString);
                 }
