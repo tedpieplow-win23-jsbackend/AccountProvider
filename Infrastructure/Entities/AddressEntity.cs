@@ -10,8 +10,5 @@ public class AddressEntity
     public string PostalCode { get; set; } = null!;
     public string City { get; set; } = null!;
 
-    [ForeignKey(nameof(UserEntity))]
-    public string UserId { get; set; } = null!;
-
     public ICollection<UserAddressEntity> UserAddresses { get; set; } = new List<UserAddressEntity>();
 }
